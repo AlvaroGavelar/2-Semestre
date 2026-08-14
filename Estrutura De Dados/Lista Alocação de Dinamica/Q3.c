@@ -14,7 +14,7 @@ liberara memória alocada através da função criada para liberação
 int *criaVetor(int n){
     int *vetor; 
     
-    vetor = (int*)malloc(n*sizeof(int));
+    *vetor = (int*)malloc(n*sizeof(int));
     if(vetor == NULL)
         return 0;
 
@@ -39,7 +39,7 @@ int main(){
     printf("\nForneca um Valor Inteiro:");
     scanf("%d", &n);
 
-    vetor = criaVetor(n);
+    *vetor = criaVetor(n);
 
     for(int i=0;i<n;i++){
         printf("\n%d. Numero:", i+1);
