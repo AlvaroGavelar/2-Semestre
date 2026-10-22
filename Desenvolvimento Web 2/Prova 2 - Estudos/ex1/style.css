@@ -1,0 +1,443 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202938;
+  background: #f2f4f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --azul: #4058b4;
+  --borda: #dfe4ee;
+  --texto-secundario: #707b91;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f2f4f9;
+}
+
+.pagina {
+  width: min(1500px, 100%);
+  margin: 0 auto;
+  padding: 48px 16px 52px;
+}
+
+.cabecalho {
+  margin-bottom: 38px;
+}
+
+.cabecalho h1 {
+  margin: 0 0 8px;
+  color: #1e2634;
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+  line-height: 1.12;
+  letter-spacing: -1.4px;
+  font-weight: 750;
+}
+
+.cabecalho p {
+  margin: 0;
+  color: var(--texto-secundario);
+  font-size: clamp(1rem, 1.7vw, 1.45rem);
+  line-height: 1.4;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 40px;
+}
+
+.painel {
+  min-width: 0;
+  padding: 36px 35px;
+  border: 1px solid var(--borda);
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 12px 36px rgb(31 45 75 / 4%);
+}
+
+.painel h2 {
+  margin: 0 0 28px;
+  color: #202938;
+  text-align: center;
+  font-size: 1.7rem;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}
+
+.painel-formulario h2 {
+  text-align: left;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 23px;
+}
+
+.campo label,
+.grupo-opcoes legend {
+  color: #202938;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  height: 62px;
+  padding: 0 17px;
+  border: 1.5px solid #d7deea;
+  border-radius: 14px;
+  outline: none;
+  background-color: #fff;
+  color: #2b3444;
+  font: inherit;
+  font-size: 1.45rem;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.campo select {
+  cursor: pointer;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: #526be0;
+  box-shadow: 0 0 0 3px rgb(82 107 224 / 13%);
+}
+
+.campo small {
+  margin-top: 1px;
+  color: #788398;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.grupo-opcoes {
+  min-width: 0;
+  margin: 0 0 25px;
+  padding: 0;
+  border: 0;
+}
+
+.grupo-opcoes legend {
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+.opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 27px;
+  row-gap: 12px;
+  padding-left: 6px;
+}
+
+.opcao-radio,
+.opcao-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #283142;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.opcao-radio input,
+.opcao-checkbox input {
+  width: 19px;
+  height: 19px;
+  margin: 0;
+  accent-color: #405fe2;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.painel-preview {
+  padding: 36px 35px 32px;
+}
+
+.painel-preview h2 {
+  margin-bottom: 27px;
+}
+
+.cartao {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  aspect-ratio: 1.59 / 1;
+  min-height: 260px;
+  padding: clamp(26px, 3vw, 42px);
+  overflow: hidden;
+  border-radius: 29px;
+  color: #fff;
+  background: linear-gradient(120deg, #2e4085 0%, #4f70c6 100%);
+  box-shadow: 0 25px 45px rgb(26 39 76 / 24%);
+  transition: background 250ms ease, color 250ms ease;
+}
+
+.cartao.classico {
+  background: linear-gradient(120deg, #2e4085 0%, #4f70c6 100%);
+  color: #fff;
+}
+
+.cartao.gold {
+  background: linear-gradient(120deg, #8e6a25 0%, #d9b85f 52%, #ad873b 100%);
+  color: #fffdf6;
+}
+
+.cartao.platinum {
+  background: linear-gradient(120deg, #555d6a 0%, #aeb5c0 54%, #717987 100%);
+  color: #fff;
+}
+
+.cartao-topo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+}
+
+.nome-banco {
+  font-size: clamp(0.75rem, 1.2vw, 1.05rem);
+  font-weight: 500;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+
+.chip {
+  width: 61px;
+  height: 45px;
+  flex: 0 0 auto;
+  border: 1px solid rgb(255 255 255 / 36%);
+  border-radius: 11px;
+  background: linear-gradient(135deg, #e4d39a, #bba65f);
+  box-shadow: inset 0 0 0 1px rgb(120 93 35 / 10%);
+}
+
+.numero-preview {
+  margin: 12px 0 4px;
+  font-size: clamp(1.1rem, 2.2vw, 2.1rem);
+  font-weight: 400;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.cartao-rodape {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(75px, 0.8fr) auto;
+  align-items: end;
+  gap: 14px;
+}
+
+.info-cartao {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 5px;
+}
+
+.rotulo-cartao {
+  color: currentColor;
+  font-size: clamp(0.55rem, 0.85vw, 0.78rem);
+  letter-spacing: 2px;
+  opacity: 0.68;
+}
+
+.valor-cartao {
+  overflow: hidden;
+  font-size: clamp(0.75rem, 1.35vw, 1.13rem);
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bandeira-preview {
+  align-self: end;
+  padding-bottom: 1px;
+  font-size: clamp(0.9rem, 1.4vw, 1.2rem);
+  font-weight: 800;
+  font-style: italic;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.beneficios-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 0 -6px;
+}
+
+.tag-beneficio {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 14px;
+  border: 1px solid #e2e6ee;
+  border-radius: 999px;
+  color: #263142;
+  background: #fff;
+  font-size: 1rem;
+}
+
+.tag-beneficio[hidden] {
+  display: none;
+}
+
+.aviso {
+  max-width: 580px;
+  margin: 30px auto 0;
+  color: #758097;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (max-width: 1050px) {
+  .conteudo {
+    gap: 22px;
+  }
+
+  .painel {
+    padding: 28px 24px;
+    border-radius: 22px;
+  }
+
+  .cartao {
+    min-height: 230px;
+    padding: 27px;
+    border-radius: 23px;
+  }
+
+  .opcoes {
+    column-gap: 18px;
+  }
+
+  .opcao-radio,
+  .opcao-checkbox {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .pagina {
+    padding: 30px 14px;
+  }
+
+  .cabecalho {
+    margin-bottom: 25px;
+  }
+
+  .cabecalho h1 {
+    letter-spacing: -0.8px;
+  }
+
+  .conteudo {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .painel {
+    padding: 25px 22px;
+  }
+
+  .painel h2 {
+    font-size: 1.45rem;
+    margin-bottom: 23px;
+  }
+
+  .campo label,
+  .grupo-opcoes legend {
+    font-size: 1.1rem;
+  }
+
+  .campo input,
+  .campo select {
+    height: 54px;
+    font-size: 1.15rem;
+  }
+
+  .campo small {
+    font-size: 0.95rem;
+  }
+
+  .cartao {
+    min-height: 0;
+    padding: clamp(18px, 5vw, 30px);
+    border-radius: 19px;
+  }
+
+  .nome-banco {
+    letter-spacing: 2.5px;
+  }
+
+  .chip {
+    width: 48px;
+    height: 34px;
+    border-radius: 8px;
+  }
+
+  .cartao-rodape {
+    grid-template-columns: minmax(0, 1.4fr) minmax(60px, 0.8fr) auto;
+    gap: 8px;
+  }
+
+  .rotulo-cartao {
+    letter-spacing: 1px;
+  }
+
+  .beneficios-preview {
+    margin-top: 15px;
+  }
+
+  .aviso {
+    margin-top: 22px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .painel {
+    padding: 21px 16px;
+  }
+
+  .opcoes {
+    column-gap: 12px;
+    padding-left: 1px;
+  }
+
+  .opcao-radio,
+  .opcao-checkbox {
+    gap: 6px;
+    font-size: 0.95rem;
+  }
+
+  .cartao {
+    padding: 16px;
+  }
+
+  .cartao-rodape {
+    grid-template-columns: minmax(0, 1fr) minmax(55px, auto) auto;
+    gap: 6px;
+  }
+
+  .valor-cartao {
+    font-size: 0.68rem;
+  }
+}

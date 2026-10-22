@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalizador de cartão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="pagina">
+    <header class="cabecalho">
+      <h1>Personalizador de cartão</h1>
+      <p>Preencha os campos e veja o cartão mudar em tempo real.</p>
+    </header>
+
+    <div class="conteudo">
+      <section class="painel painel-formulario" aria-labelledby="tituloFormulario">
+        <h2 id="tituloFormulario">Personalize seu cartão</h2>
+
+        <form id="formCartao">
+          <div class="campo">
+            <label for="nomeTitular">Nome do titular</label>
+            <input
+              type="text"
+              id="nomeTitular"
+              name="nomeTitular"
+              value=""
+              placeholder="Digite o nome do titular"
+              autocomplete="off"
+            >
+          </div>
+
+          <div class="campo">
+            <label for="numeroCartao">Número do cartão</label>
+            <input
+              type="text"
+              id="numeroCartao"
+              name="numeroCartao"
+              value=""
+              placeholder="1234 5678 9012 3456"
+              inputmode="numeric"
+              maxlength="16"
+              autocomplete="off"
+            >
+            <small>Digite até 16 números. Use apenas dados fictícios.</small>
+          </div>
+
+          <div class="campo">
+            <label for="validadeCartao">Validade</label>
+            <input
+              type="text"
+              id="validadeCartao"
+              name="validadeCartao"
+              placeholder="MM/AA"
+              maxlength="5"
+              autocomplete="off"
+            >
+          </div>
+
+          <div class="campo">
+            <label for="bandeiraCartao">Bandeira do cartão</label>
+            <select id="bandeiraCartao" name="bandeiraCartao">
+              <option value="visa" selected>Visa</option>
+              <option value="mastercard">Mastercard</option>
+              <option value="elo">Elo</option>
+              <option value="amex">American Express</option>
+            </select>
+          </div>
+
+          <fieldset class="grupo-opcoes">
+            <legend>Modelo do cartão</legend>
+            <div class="opcoes modelo-opcoes">
+              <label class="opcao-radio" for="modeloClassico">
+                <input type="radio" id="modeloClassico" name="modelo" value="classico" checked>
+                <span>Clássico</span>
+              </label>
+              <label class="opcao-radio" for="modeloGold">
+                <input type="radio" id="modeloGold" name="modelo" value="gold">
+                <span>Gold</span>
+              </label>
+              <label class="opcao-radio" for="modeloPlatinum">
+                <input type="radio" id="modeloPlatinum" name="modelo" value="platinum">
+                <span>Platinum</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo-opcoes beneficios-opcoes">
+            <legend>Benefícios</legend>
+            <div class="opcoes">
+              <label class="opcao-checkbox" for="beneficioContactless">
+                <input type="checkbox" id="beneficioContactless" name="beneficios" value="contactless">
+                <span>Contactless</span>
+              </label>
+              <label class="opcao-checkbox" for="beneficioInternacional">
+                <input type="checkbox" id="beneficioInternacional" name="beneficios" value="internacional" checked>
+                <span>Internacional</span>
+              </label>
+              <label class="opcao-checkbox" for="beneficioCashback">
+                <input type="checkbox" id="beneficioCashback" name="beneficios" value="cashback" checked>
+                <span>Cashback</span>
+              </label>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="painel painel-preview" aria-labelledby="tituloPreview">
+        <h2 id="tituloPreview">Pré-visualização</h2>
+
+        <!-- O JavaScript poderá trocar as classes classico, gold e platinum. -->
+        <div class="cartao classico" id="cartaoPreview">
+          <div class="cartao-topo">
+            <span class="nome-banco">BANCO EXEMPLO</span>
+            <div class="chip" aria-label="Chip do cartão"></div>
+          </div>
+
+          <div class="numero-preview" id="numeroPreview">1234 5678 9101 1213</div>
+
+          <div class="cartao-rodape">
+            <div class="info-cartao titular-info">
+              <span class="rotulo-cartao">TITULAR</span>
+              <span class="valor-cartao" id="titularPreview">MARIA DA SILVA</span>
+            </div>
+            <div class="info-cartao validade-info">
+              <span class="rotulo-cartao">VALIDADE</span>
+              <span class="valor-cartao" id="validadePreview">MM/AA</span>
+            </div>
+            <div class="bandeira-preview" id="bandeiraPreview">VISA</div>
+          </div>
+        </div>
+
+        <div class="beneficios-preview" id="beneficiosPreview" aria-label="Benefícios selecionados">
+          <span class="tag-beneficio" id="tagContactless" hidden>Contactless</span>
+          <span class="tag-beneficio" id="tagInternacional">Internacional</span>
+          <span class="tag-beneficio" id="tagCashback">Cashback</span>
+        </div>
+
+        <p class="aviso">Este cartão é apenas uma demonstração visual. Não insira dados reais.</p>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

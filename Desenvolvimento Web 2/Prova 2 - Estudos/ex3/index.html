@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>02 — Produto</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">EXERCÍCIO 02 · FÁCIL / INTERMEDIÁRIO</p>
+      <h1>Monte seu pedido</h1>
+      <p>Controle a quantidade e atualize o resumo da compra.</p>
+    </header>
+    <section class="product-layout">
+      <article class="product-card">
+        <div class="product-art"><span>☕</span>
+          <div class="art-circle"></div>
+        </div>
+        <div class="product-info"><span class="tag">MAIS VENDIDO</span>
+          <h2>Caneca térmica</h2>
+          <p class="muted">Aço inoxidável · 350 ml</p>
+          <p class="price">R$ 59,90</p><label for="corProduto">Cor</label><select id="corProduto">
+            <option value="Preta">Preta</option>
+            <option value="Branca">Branca</option>
+            <option value="Verde">Verde</option>
+          </select><label for="quantidadeProduto">Quantidade</label>
+          <div class="quantity"><button id="diminuir" type="button" aria-label="Diminuir quantidade">−</button><output
+              id="quantidadePreview">1</output><button id="aumentar" type="button"
+              aria-label="Aumentar quantidade">+</button></div>
+        </div>
+      </article>
+      <aside class="summary">
+        <h2>Resumo do pedido</h2>
+        <div class="line"><span>Produto</span><strong>Caneca térmica</strong></div>
+        <div class="line"><span>Cor escolhida</span><strong id="corPreview">Preta</strong></div>
+        <div class="line"><span>Quantidade</span><strong id="quantidadeResumo">1</strong></div>
+        <div class="line total"><span>Total</span><strong id="totalPreview">R$ 59,90</strong></div><button
+          id="finalizar" type="button" class="primary">Finalizar pedido</button>
+        <p id="mensagemPedido" class="message" aria-live="polite"></p>
+      </aside>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>04 — Validador de senha</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="card">
+    <div class="lock">⌑</div>
+    <p class="eyebrow">EXERCÍCIO 04 · INTERMEDIÁRIO</p>
+    <h1>Crie sua senha</h1>
+    <p class="sub">Pratique eventos, condições e validação de campos.</p>
+    <label for="senha">Senha</label>
+    <div class="password-row"><input id="senha" type="password" placeholder="Digite uma senha"><button id="mostrarSenha"
+        type="button">Mostrar</button></div>
+    <div class="meter"><span id="barraForca"></span></div>
+    <p id="forcaSenha" class="status">Digite uma senha para começar</p>
+    <label for="confirmarSenha">Confirmar senha</label><input id="confirmarSenha" type="password"
+      placeholder="Digite novamente a senha">
+    <p id="mensagemConfirmacao" class="feedback">As senhas ainda não foram verificadas.</p>
+    <button id="criarConta" class="primary" type="button">Criar conta</button>
+    <p id="resultadoConta" class="result" aria-live="polite"></p>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8eefb, #f8faff);
+    font-family: Inter, Segoe UI, Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    padding: 22px;
+    color: #1d2738
+}
+
+.card {
+    width: min(440px, 100%);
+    background: white;
+    border: 1px solid #e0e7f2;
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 20px 60px #233e6d18
+}
+
+.lock {
+    height: 48px;
+    width: 48px;
+    background: #eaf0ff;
+    color: #3d63c9;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 29px
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #66779c;
+    font-weight: 800;
+    margin: 24px 0 8px
+}
+
+h1 {
+    margin: 0;
+    font-size: 27px
+}
+
+.sub {
+    color: #758096;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-bottom: 26px
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 17px 0 8px
+}
+
+.password-row {
+    display: flex;
+    gap: 8px
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #d4dbea;
+    border-radius: 10px;
+    padding: 13px;
+    font: inherit;
+    outline: none
+}
+
+input:focus {
+    border-color: #547be0;
+    box-shadow: 0 0 0 3px #547be018
+}
+
+.password-row button {
+    border: 1px solid #d4dbea;
+    background: white;
+    border-radius: 10px;
+    padding: 0 12px;
+    cursor: pointer
+}
+
+.meter {
+    height: 6px;
+    background: #edf0f5;
+    border-radius: 10px;
+    margin-top: 14px;
+    overflow: hidden
+}
+
+.meter span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #cbd5e1;
+    transition: width .2s
+}
+
+.status,
+.feedback,
+.result {
+    font-size: 12px;
+    color: #758096;
+    min-height: 18px;
+    line-height: 1.5
+}
+
+.feedback {
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #f6f8fb
+}
+
+.primary {
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    padding: 14px;
+    color: white;
+    background: #365fd0;
+    font-weight: 800;
+    margin-top: 10px;
+    cursor: pointer
+}
+
+.result {
+    margin-bottom: 0
+}
+
+.fraca {
+    background: #e05252 !important;
+    width: 33% !important;
+}
+
+.media {
+    background: #e6a23c !important;
+    width: 66% !important;
+}
+
+.forte {
+    background: #24a36a !important;
+    width: 100% !important;
+}
+
+.erro {
+    color: #c03945 !important
+}
+
+.sucesso {
+    color: #14804a !important
+}

@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Inter, Segoe UI, Arial, sans-serif;
+    background: #f1f5f9;
+    color: #172033;
+    display: grid;
+    place-items: center;
+    padding: 28px
+}
+
+.layout {
+    width: min(960px, 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px
+}
+
+.painel,
+.preview-area {
+    background: white;
+    border: 1px solid #e1e7ef;
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 14px 40px #1b315012
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.6px;
+    font-weight: 800;
+    color: #64748b;
+    margin: 0 0 12px
+}
+
+.painel h1 {
+    font-size: 29px;
+    margin: 0 0 10px
+}
+
+.intro {
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0 0 24px
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    margin: 17px 0 8px
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #fff;
+    font: inherit;
+    outline: none
+}
+
+input:focus,
+select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px #3b82f620
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 500
+}
+
+.check input {
+    width: 17px;
+    height: 17px
+}
+
+.preview-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.profile-card {
+    border-radius: 20px;
+    color: white;
+    padding: 27px;
+    min-height: 270px;
+    box-shadow: 0 18px 35px #17203320;
+    transition: background .2s
+}
+
+.tema-azul {
+    background: linear-gradient(135deg, #1458bd, #2789e8)
+}
+
+.tema-verde {
+    background: linear-gradient(135deg, #087f5b, #34b879)
+}
+
+.tema-roxo {
+    background: linear-gradient(135deg, #5b35b5, #9872ed)
+}
+
+.avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    background: #ffffff35;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 22px
+}
+
+.card-label {
+    font-size: 10px;
+    letter-spacing: 1.6px;
+    opacity: .8
+}
+
+.profile-card h2 {
+    font-size: 27px;
+    margin: 8px 0
+}
+
+.course {
+    margin: 0;
+    opacity: .9
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 1px solid #ffffff48;
+    padding-top: 19px;
+    margin-top: 28px;
+    font-size: 11px
+}
+
+.hint {
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+    margin: 18px 0 0
+}
+
+@media(max-width:720px) {
+    .layout {
+        grid-template-columns: 1fr
+    }
+
+    .painel,
+    .preview-area {
+        padding: 23px
+    }
+}

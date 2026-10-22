@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 — Cartão de perfil</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="layout">
+    <section class="painel">
+      <p class="eyebrow">EXERCÍCIO 01 · FÁCIL</p>
+      <h1>Personalize seu perfil</h1>
+      <p class="intro">Edite os campos e faça o cartão ao lado acompanhar as mudanças.</p>
+      <label for="nomePerfil">Nome</label>
+      <input id="nomePerfil" type="text" placeholder="Ex.: Ana Souza" value="Ana Souza">
+      <label for="cursoPerfil">Curso</label>
+      <input id="cursoPerfil" type="text" placeholder="Ex.: Sistemas de Informação" value="Sistemas de Informação">
+      <label for="temaPerfil">Tema do cartão</label>
+      <select id="temaPerfil">
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+        <option value="roxo">Roxo</option>
+      </select>
+      <label class="check"><input id="detalhesPerfil" type="checkbox" checked> Mostrar detalhes do perfil</label>
+    </section>
+    <section class="preview-area">
+      <p class="eyebrow">PRÉ-VISUALIZAÇÃO</p>
+      <article id="cartaoPerfil" class="profile-card tema-azul">
+        <div class="avatar">AS</div>
+        <p class="card-label">PERFIL DO ESTUDANTE</p>
+        <h2 id="nomePreview">Ana Souza</h2>
+        <p id="cursoPreview" class="course">Sistemas de Informação</p>
+        <div id="detalhesPreview" class="details"><span>Estudante</span><span>Disponível para aprender</span></div>
+      </article>
+      <p class="hint">Seu JavaScript deve atualizar este cartão.</p>
+    </section>
+  </main>
+</body>
+</html>
