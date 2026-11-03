@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.container {
+    width: 550px;
+    max-width: 90%;
+    text-align: left;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.preview {
+    margin-bottom: 24px;
+}
+
+.preview h4 {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 6px;
+}
+
+#barra {
+    max-width: 100%;
+    width: 100%;
+    height: 24px;
+    background-color: #808080;
+    border: 1px solid #555;
+    box-shadow: 4px 4px 2px #bbb;
+    border-radius: 0px;
+}
+
+#progresso {
+    width: 85%;
+    height: 100%;
+    background-color: blue;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#progresso span {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 13px;
+}
+
+.campo label,
+.radio > label {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    height: 30px;
+    font-size: 13px;
+    border: 1px solid #aaa;
+    background-color: white;
+    padding: 4px 6px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    gap: 6px;
+}
+
+.opcao input {
+    width: 14px;
+    height: 14px;
+}
+
+.opcao label {
+    font-size: 13px;
+}
+
+.radio {
+    margin-top: 5px;
+    margin-bottom: 16px;
+}
+
+.radio > label {
+    display: block;
+}
+
+.radio div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.radio input {
+    width: 14px;
+    height: 14px;
+}
+
+.radio div label {
+    font-size: 13px;
+    margin-right: 8px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}

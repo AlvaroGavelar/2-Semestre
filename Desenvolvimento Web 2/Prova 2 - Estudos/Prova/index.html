@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prova 2</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="container">
+
+            <h2>Personalizar gráfico</h2>
+        
+        <div class="preview">
+            <h4 id="legendaG">Nota média da turma</h4>
+
+            <div id="barra">
+                <div id="progresso">
+                    <span id="valorG">85%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label for="legenda">Legenda do gráfico</label>
+            <input type="text" id="legenda" placeholder="Legenda">
+        </div>
+
+        <div class="campo">
+            <label for="valor">Valor do gráfico (%)</label>
+            <input type="number" id="valor" value="85">
+        </div>
+
+        <div class="opcao">
+            <input type="checkbox" id="numero" checked>
+            <label for="numero">Exibir valor numérico</label>
+        </div>
+
+        <div class="campo">
+            <label for="largura">Largura do gráfico (px)</label>
+            <input type="number" id="largura" placeholder="Largura">
+        </div>
+
+        <div class="opcao">
+            <input type="checkbox" id="arredondado">
+            <label for="arredondado">Bordas arredondadas</label>
+        </div>
+
+        <div class="campo">
+            <label for="espessura">Espessura da borda</label>
+            <select id="espessura">
+                <option value="1px">Fina (1px)</option>
+                <option value="3px">Média (3px)</option>
+                <option value="5px">Grossa (5px)</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="borda">Cor da borda</label>
+            <input type="text" id="borda" placeholder="Cor">
+        </div>
+
+        <div class="campo">
+            <label for="fundo">Cor do fundo</label>
+            <input type="text" id="fundo" placeholder="Cor">
+        </div>
+
+        <div class="campo">
+            <label for="barra">Cor da barra</label>
+            <input type="text" id="corBarra" placeholder="Cor">
+        </div>
+
+        <div class="radio">
+            <label>Sombra no gráfico</label>
+            <div>
+                <input type="radio" name="sombra" id="sim" checked>
+                <label for="sim">Sim</label>
+
+                <input type="radio" name="sombra" id="nao">
+                <label for="nao">Não</label>
+            </div>
+        </div>
+
+        <button type="button" id="btn">Atualizar</button>
+
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
